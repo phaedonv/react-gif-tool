@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import giphy from 'giphy';
+import giphy from 'giphy-api';
 
 import SearchBar from './search_bar';
 import Gif from './gif';
@@ -12,7 +12,9 @@ class App extends Component {
     this.state = {
       gifs: [],
       selectedGifId: "J2runRfQPvK3zqSNX5"
-    }
+    };
+
+    this.search("homer thinking");
   }
 
   search = (query) => {
