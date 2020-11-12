@@ -21,10 +21,12 @@ class App extends Component {
     giphy('uXy74uXuvP1WtYYE4f6CdMcZRA9Dq4d1').search({
       q: query,
       rating: 'g'
-    }, function (error, result) {
-      console.log(result);
-    // Res contains gif data!
-});
+    }, (error, result) => {
+      this.setState({
+        gifs: result.data
+      // Res contains gif data!
+      });
+    });
   }
 
   render() {
