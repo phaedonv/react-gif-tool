@@ -8,6 +8,7 @@ class SearchBar extends Component {
       term: ""
     };
   }
+
   handleUpdate = (event) => {
     this.setState({
       term: event.target.value
@@ -15,7 +16,16 @@ class SearchBar extends Component {
     this.props.searchFunction(event.target.value);
   }
 
+  componentWillMount() {
+    console.log("SEARCH_BAR_WILL_MOUNT");
+  }
+
+  componentDidMount() {
+    console.log("SEARCH_BAR_DID_MOUNT");
+  }
+
   render() {
+    console.log("SEARCH_BAR RENDER");
     return (
       <input
       value={this.state.term}

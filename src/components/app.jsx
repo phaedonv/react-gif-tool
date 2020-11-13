@@ -13,15 +13,15 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "J2runRfQPvK3zqSNX5"
+      selectedGifId: null//"J2runRfQPvK3zqSNX5"
     };
   }
 
   search = (query) => {
-    giphy(API_KEY).search({
+    giphy({ api_key: API_KEY, https: true }).search({
       q: query,
       rating: 'g',
-      limit: 42
+      limit: 9
     }, (error, result) => {
       this.setState({
         gifs: result.data
