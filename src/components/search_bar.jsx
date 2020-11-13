@@ -25,7 +25,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    console.log("SEARCH_BAR RENDER")
+    console.log("SEARCH_BAR RENDER");
     return (
       <input
       value={this.state.term}
