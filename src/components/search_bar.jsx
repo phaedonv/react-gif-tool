@@ -28,6 +28,7 @@ class SearchBar extends Component {
     console.log("SEARCH_BAR RENDER");
     return (
       <input
+      placeholder="Search here for a GIF!"
       value={this.state.term}
       type="text"
       className="form-control form-search"
