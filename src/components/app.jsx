@@ -5,7 +5,7 @@ import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
 
-const API_KEY = process.env.GIPHY_API_KEY;
+const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 class App extends Component {
   constructor(props) {
